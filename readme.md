@@ -24,7 +24,7 @@ git clone https://github.com/maargadux/autoexcelmailer
 
 pip install openpyxl
 
-    - Configure suas variáveis no script autoexcelmailer.py:
+Configure suas variáveis no script autoexcelmailer.py:
 
 ARQUIVO_EXCEL = 'planilhas.xlsx'
 
@@ -74,5 +74,6 @@ O script vai adicionar automaticamente a data atual e os valores na sua planilha
 
 
 Feito com por Mali
+
 
 
