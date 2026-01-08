@@ -18,7 +18,7 @@ Um **script Python inteligente** que atualiza automaticamente suas planilhas Exc
 
 1. Clone este repositório:
 ```bash``
-git clone https://github.com/seuusuario/autoexcelmailer.git
+git clone https://github.com/maargadux/autoexcelmailer
 
     - Instale as dependências:
 
@@ -69,3 +69,4 @@ O script vai adicionar automaticamente a data atual e os valores na sua planilha
 
 
 Feito com por Mali
+
