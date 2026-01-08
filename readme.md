@@ -41,9 +41,10 @@ python autoexcelmailer.py
 
 ## 🖌️ Exemplo de arquivo .txt
 
-- João,1500
-- Maria,2300
-- Carlos,1200
+- Luz,120.50
+- Água,80.00
+- Internet,150.00
+
 
 O script vai adicionar automaticamente a data atual e os valores na sua planilha Excel.
 
@@ -65,5 +66,6 @@ O script vai adicionar automaticamente a data atual e os valores na sua planilha
    - Adicionar interface gráfica
    - Automatizar envio recorrente com cron jobs / agendador do Windows
    - Integração com Google Sheets
+
 
 Feito com por Mali
