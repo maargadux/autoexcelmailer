@@ -18,13 +18,14 @@ Um **script Python inteligente** que atualiza automaticamente suas planilhas Exc
 
 1. Clone este repositório:
 ```bash``
+
 git clone https://github.com/maargadux/autoexcelmailer
 
-    - Instale as dependências:
+2. Instale as dependências:
 
-pip install openpyxl
+     - pip install openpyxl
 
-Configure suas variáveis no script autoexcelmailer.py:
+3. Configure suas variáveis no script autoexcelmailer.py:
 
 ARQUIVO_EXCEL = 'planilhas.xlsx'
 
@@ -40,7 +41,7 @@ EMAIL_DESTINO = 'cliente@email.com'
 
     - 💡 Dica: Crie uma senha de app no Gmail para maior segurança.
 
-    - Execute o script:
+4. Execute o script:
 
 python autoexcelmailer.py
 
@@ -74,6 +75,7 @@ O script vai adicionar automaticamente a data atual e os valores na sua planilha
 
 
 Feito com por Mali
+
 
 
 
