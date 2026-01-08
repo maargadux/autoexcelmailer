@@ -27,10 +27,15 @@ pip install openpyxl
     - Configure suas variáveis no script autoexcelmailer.py:
 
 ARQUIVO_EXCEL = 'planilhas.xlsx'
+
 ABA = 'Folha1'
+
 ARQUIVO_TXT = 'contas.txt'
+
 EMAIL_REMETENTE = 'seuemail@gmail.com'
+
 SENHA_APP = 'SUA_SENHA_DE_APP'
+
 EMAIL_DESTINO = 'cliente@email.com'
 
     - 💡 Dica: Crie uma senha de app no Gmail para maior segurança.
@@ -69,4 +74,5 @@ O script vai adicionar automaticamente a data atual e os valores na sua planilha
 
 
 Feito com por Mali
+
 
