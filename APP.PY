@@ -4,29 +4,30 @@ from openpyxl import load_workbook
 from datetime import datetime
 
 # config esperta p nao se perder
-aqr_exc = 'planilhas.xlsx' #nome do arquivo da planilha
-aba = 'Folha1' #aba que aparece na planilha
-aqr_txt = 'contas.txt' #nome do seu bloco de notas
-#informacao dos emails
+arquivo_exc = 'planilhas.xlsx'  # nome do arquivo da planilha
+aba = 'Folha1'                  # aba que aparece na planilha
+arq_txt = 'contas.txt'          # nome do seu bloco de notas
+
+# informações dos emails
 eme_rem = 'seuemail@gmail.com'
 senha_apps = 'senhaapp'
 eme_desti = 'clienteemail@email.com'
 
-# abre o arq q ta na pasta
-wb = load_workbook(arq_exc)
+# abre o arquivo
+wb = load_workbook(arquivo_exc)
 ws = wb[aba]
 
-# data agr
+# data atual
 data_atual = datetime.now().strftime('%d/%m/%Y')
 
-# coloca os dados no exc
+# coloca os dados no excel
 with open(arq_txt, 'r', encoding='utf-8') as arquivo:
     for linha in arquivo:
         dados = linha.strip().split(',')
         if len(dados) == 2:
             ws.append([data_atual, dados[0], float(dados[1])])
 
-wb.save(arq_exc)
+wb.save(arquivo_exc)
 
 # envia para o email
 msg = EmailMessage()
@@ -35,12 +36,12 @@ msg['From'] = eme_rem
 msg['To'] = eme_desti
 msg.set_content('Segue em anexo a planilha atualizada automaticamente.')
 
-with open(arq_exc, 'rb') as f:
+with open(arquivo_exc, 'rb') as f:
     msg.add_attachment(
         f.read(),
         maintype='application',
         subtype='vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-        filename=arq_exc
+        filename=arquivo_exc
     )
 
 with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
